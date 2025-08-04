@@ -41,7 +41,7 @@ namespace YSCommon
 
         public Properties(string fileName)
         {
-            string? assemblyName = Assembly.GetExecutingAssembly().GetName().Name;
+            string? assemblyName = Assembly.GetEntryAssembly().GetName().Name;
             _folder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), assemblyName!);
             _fullPath = Path.Combine(_folder, fileName);
             _properties = Initialize();

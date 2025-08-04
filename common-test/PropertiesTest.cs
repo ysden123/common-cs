@@ -33,4 +33,10 @@ public class PropertiesTest
         Assert.That(propertiesList, Has.Count.EqualTo(1));
         Assert.That(propertiesList["key1"], Is.EqualTo("value1"));
     }
+
+    [Test]
+    public void Ctor2Test()
+    {
+        var properties = new Properties("test.properties");
+    }
 }
