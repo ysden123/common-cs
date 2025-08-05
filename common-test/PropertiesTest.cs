@@ -22,10 +22,12 @@ public class PropertiesTest
         var properties = new Properties(".", "test.properties");
         var propertiesList = properties.GetProperties();
         Assert.That(propertiesList, Has.Count.EqualTo(0));
+        Assert.That(properties.GetProperty("key1"), Is.Null);
 
         properties.SetProperty("key1", "value1");
         propertiesList = properties.GetProperties();
         Assert.That(propertiesList, Has.Count.EqualTo(1));
+        Assert.That(properties.GetProperty("key1"), Is.Not.Null);
 
         properties.SaveProperties();
         properties = new Properties(".", "test.properties");

@@ -52,6 +52,11 @@ namespace YSCommon
             return new Dictionary<string, string>(_properties);
         }
 
+        public string? GetProperty(string key)
+        {
+            return _properties.TryGetValue(key, out var value) ? value : null;
+        }
+
         public void SetProperty(string key, string value)
         {
            _properties[key] = value;
