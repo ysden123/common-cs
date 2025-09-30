@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net9.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyVersion>1.0.2</AssemblyVersion>
+    <AssemblyVersion>1.1.0</AssemblyVersion>
     <RootNamespace>YSCommon</RootNamespace>
   </PropertyGroup>
 
