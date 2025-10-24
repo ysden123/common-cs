@@ -12,7 +12,7 @@ public class UtilsTests
     [Test]
     public void Test1()
     {
-        var folder = Utils.GetAssemblyFolderInLocalData();
+        var folder = Utils.GetAssemblyFolderInLocalData("common-test");
         Assert.That(folder, Does.EndWith(@"\AppData\Local\common-test"));
     }
 }

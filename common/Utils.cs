@@ -15,15 +15,12 @@ namespace YSCommon
         }
 
         /// <summary>
-        /// Builds and returns the path to a folder in LocalApplicationData named after the executing assembly.   
+        /// Builds the path to the local application data folder for the specified assembly.
         /// </summary>
-        /// <returns>The path to a folder in LocalApplicationData named after the executing assembly</returns>
-        /// <exception cref="Exception">If can't get an Assembly the Assembly name</exception>
-        public static string GetAssemblyFolderInLocalData()
+        /// <param name="assemblyName"></param>
+        /// <returns>the path to the local application data folder for the specified assembly.</returns>
+        public static string GetAssemblyFolderInLocalData(string assemblyName)
         {
-            //Assembly assembly = Assembly.GetExecutingAssembly() ?? throw new Exception("Can't get excuting assembly!");
-            Assembly assembly = Assembly.GetCallingAssembly() ?? throw new Exception("Can't get excuting assembly!");
-            string assemblyName = assembly.GetName().Name ?? throw new Exception("Can't get assembly name!");
             string folder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), assemblyName);
             return folder;
         }
