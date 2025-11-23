@@ -1,6 +1,4 @@
-﻿using System.Reflection;
-
-namespace YSCommon
+﻿namespace YSCommon
 {
     public class Utils
     {
